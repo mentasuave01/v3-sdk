@@ -31,7 +31,7 @@ export function computePoolAddress({
     factoryAddress,
     keccak256(
       ['bytes'],
-      [defaultAbiCoder.encode(['address', 'address', 'uint24'], [token0.address, token1.address, fee])]
+      [defaultAbiCoder.encode(['address', 'address', 'uint24'], [factoryAddress, token0.address, token1.address, fee])]
     ),
     initCodeHashManualOverride ?? POOL_INIT_CODE_HASH
   )
